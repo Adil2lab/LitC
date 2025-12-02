@@ -1,0 +1,3 @@
+ninja: Entering directory `/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a'
+[1/2] Building CXX object CMakeFiles/controller.dir/controller.cpp.o
+[2/2] Linking CXX shared library /home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/armeabi-v7a/libcontroller.so

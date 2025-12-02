@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a",
+  "command": "/home/adil/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=armv7-none-linux-androideabi21 --sysroot=/home/adil/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dcontroller_EXPORTS -std=c++17 -g  -fno-limit-debug-info -fPIC -o CMakeFiles/controller.dir/controller.cpp.o -c /home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/controller.cpp",
+  "file": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/controller.cpp"
+}
+]

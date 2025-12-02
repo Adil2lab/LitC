@@ -1,0 +1,1 @@
+/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/RelWithDebInfo/5f495m3i/obj/armeabi-v7a

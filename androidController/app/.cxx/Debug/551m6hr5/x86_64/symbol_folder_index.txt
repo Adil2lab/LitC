@@ -1,0 +1,1 @@
+/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/x86_64

@@ -1,0 +1,4 @@
+/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /home/adil/Desktop/controllerProject/androidController/app/.cxx/RelWithDebInfo/5f495m3i/x86_64 \
+  controller

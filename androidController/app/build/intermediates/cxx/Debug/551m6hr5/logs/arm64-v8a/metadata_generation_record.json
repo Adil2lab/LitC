@@ -1,0 +1,156 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 21 min SDK version: arm64-v8a",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1718951476
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON /home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a/android_gradle_build.json due to:",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 2040381534
+  },
+  {
+    "level_": 0,
+    "message_": "- no fingerprint file, will remove stale configuration folder",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -144306961
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a\u0027",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -774552085
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a\u0027",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 856347743
+  },
+  {
+    "level_": 0,
+    "message_": "executing cmake /home/adil/Android/Sdk/cmake/3.22.1/bin/cmake \\\n  -H/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d21 \\\n  -DANDROID_PLATFORM\u003dandroid-21 \\\n  -DANDROID_ABI\u003darm64-v8a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a \\\n  -DANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_ANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/home/adil/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_CXX_FLAGS\u003d-std\u003dc++17 \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/arm64-v8a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/arm64-v8a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a \\\n  -GNinja\n",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1262968877
+  },
+  {
+    "level_": 0,
+    "message_": "/home/adil/Android/Sdk/cmake/3.22.1/bin/cmake \\\n  -H/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d21 \\\n  -DANDROID_PLATFORM\u003dandroid-21 \\\n  -DANDROID_ABI\u003darm64-v8a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a \\\n  -DANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_ANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/home/adil/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_CXX_FLAGS\u003d-std\u003dc++17 \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/arm64-v8a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/arm64-v8a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a \\\n  -GNinja\n",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -961505868
+  },
+  {
+    "level_": 0,
+    "message_": "Exiting generation of /home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a/compile_commands.json.bin normally",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -322648892
+  },
+  {
+    "level_": 0,
+    "message_": "done executing cmake",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1740648815
+  },
+  {
+    "level_": 0,
+    "message_": "hard linked /home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/arm64-v8a/compile_commands.json to /home/adil/Desktop/controllerProject/androidController/app/.cxx/tools/debug/arm64-v8a/compile_commands.json",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1215358673
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed without problems",
+    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
+    "tag_": "debug|arm64-v8a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -616245397
+  }
+]

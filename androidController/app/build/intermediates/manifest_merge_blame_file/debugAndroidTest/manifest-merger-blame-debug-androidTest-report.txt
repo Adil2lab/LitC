@@ -1,0 +1,32 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.controller.test" >
+4
+5    <uses-sdk
+5-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:5:15-41
+7        android:targetSdkVersion="33" />
+7-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:5:42-71
+8
+9    <instrumentation
+9-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:11:5-15:64
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:11:22-75
+11        android:functionalTest="false"
+11-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:13:22-53
+13        android:label="Tests for com.controller"
+13-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:15:22-62
+14        android:targetPackage="com.controller" />
+14-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:12:22-60
+15
+16    <application android:debuggable="true" >
+16-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:7:5-9:19
+17        <uses-library android:name="android.test.runner" />
+17-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:8:9-60
+17-->/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16295386362540827167.xml:8:23-57
+18    </application>
+19
+20</manifest>

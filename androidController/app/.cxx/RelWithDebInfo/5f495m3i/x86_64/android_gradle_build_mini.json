@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/adil/Desktop/controllerProject/androidController/app/.cxx/RelWithDebInfo/5f495m3i/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/adil/Desktop/controllerProject/androidController/app/.cxx/RelWithDebInfo/5f495m3i/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "controller::@6890427a1f51a3e7e1df": {
+      "artifactName": "controller",
+      "abi": "x86_64",
+      "output": "/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/RelWithDebInfo/5f495m3i/obj/x86_64/libcontroller.so",
+      "runtimeFiles": []
+    }
+  }
+}
