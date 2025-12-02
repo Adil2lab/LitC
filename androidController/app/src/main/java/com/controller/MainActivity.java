@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 
         EditText ipInput = new EditText(this);
         ipInput.setHint("Server IP Address");
-        ipInput.setText("192.168.1.50"); // Change to your Linux IP
+        ipInput.setText("192.168.0.11"); // Change to your Linux IP
         ipInput.setGravity(Gravity.CENTER);
         layout.addView(ipInput);
 

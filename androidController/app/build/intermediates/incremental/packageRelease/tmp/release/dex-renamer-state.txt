@@ -1,4 +1,0 @@
-#Tue Dec 02 20:05:08 BDT 2025
-base.0=/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

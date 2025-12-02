@@ -15,7 +15,7 @@
   },
   {
     "level_": 0,
-    "message_": "rebuilding JSON /home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a/android_gradle_build.json due to:",
+    "message_": "JSON \u0027/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a/android_gradle_build.json\u0027 was up-to-date",
     "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
     "tag_": "debug|armeabi-v7a",
     "diagnosticCode_": 0,
@@ -25,119 +25,7 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": -1380033094
-  },
-  {
-    "level_": 0,
-    "message_": "- no fingerprint file, will remove stale configuration folder",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 968312973
-  },
-  {
-    "level_": 0,
-    "message_": "removing stale contents from \u0027/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a\u0027",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 1672728203
-  },
-  {
-    "level_": 0,
-    "message_": "created folder \u0027/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a\u0027",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 1304399871
-  },
-  {
-    "level_": 0,
-    "message_": "executing cmake /home/adil/Android/Sdk/cmake/3.22.1/bin/cmake \\\n  -H/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d21 \\\n  -DANDROID_PLATFORM\u003dandroid-21 \\\n  -DANDROID_ABI\u003darmeabi-v7a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a \\\n  -DANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_ANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/home/adil/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_CXX_FLAGS\u003d-std\u003dc++17 \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/armeabi-v7a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/armeabi-v7a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a \\\n  -GNinja\n",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 994113843
-  },
-  {
-    "level_": 0,
-    "message_": "/home/adil/Android/Sdk/cmake/3.22.1/bin/cmake \\\n  -H/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d21 \\\n  -DANDROID_PLATFORM\u003dandroid-21 \\\n  -DANDROID_ABI\u003darmeabi-v7a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a \\\n  -DANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_ANDROID_NDK\u003d/home/adil/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/home/adil/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/home/adil/Android/Sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_CXX_FLAGS\u003d-std\u003dc++17 \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/armeabi-v7a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/551m6hr5/obj/armeabi-v7a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a \\\n  -GNinja\n",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 1082902996
-  },
-  {
-    "level_": 0,
-    "message_": "Exiting generation of /home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a/compile_commands.json.bin normally",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": 1190910948
-  },
-  {
-    "level_": 0,
-    "message_": "done executing cmake",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -1441698547
-  },
-  {
-    "level_": 0,
-    "message_": "hard linked /home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/armeabi-v7a/compile_commands.json to /home/adil/Desktop/controllerProject/androidController/app/.cxx/tools/debug/armeabi-v7a/compile_commands.json",
-    "file_": "/home/adil/Desktop/controllerProject/androidController/app/src/main/cpp/CMakeLists.txt",
-    "tag_": "debug|armeabi-v7a",
-    "diagnosticCode_": 0,
-    "memoizedIsInitialized": 1,
-    "unknownFields": {
-      "fields": {},
-      "fieldsDescending": {}
-    },
-    "memoizedSize": -1,
-    "memoizedHashCode": -1878741299
+    "memoizedHashCode": 181402129
   },
   {
     "level_": 0,

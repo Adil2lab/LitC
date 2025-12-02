@@ -1,3 +1,0 @@
-ninja: Entering directory `/home/adil/Desktop/controllerProject/androidController/app/.cxx/RelWithDebInfo/5f495m3i/x86_64'
-[1/2] Building CXX object CMakeFiles/controller.dir/controller.cpp.o
-[2/2] Linking CXX shared library /home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/RelWithDebInfo/5f495m3i/obj/x86_64/libcontroller.so
