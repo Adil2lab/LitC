@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <cstring>
 #include <android/log.h>
+#include "./controller-protocol.h"
 
 #define LOG_TAG "Controller"
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
