@@ -1,5 +1,6 @@
 #include "controller-protocol.h"
 #include <arpa/inet.h>
+#include <cstdio>
 #include <cstring>
 #include <iomanip>
 #include <iostream>
@@ -8,7 +9,6 @@
 #include <unistd.h>
 
 using std::cout;
-using std::cerr;
 
 void printControllerState(const controller::Packet &packet) {
   cout << "\n=== Packet #" << packet.packetId << "===\n";
@@ -49,7 +49,7 @@ int main() {
   // Create UDP socket
   int sock = socket(AF_INET, SOCK_DGRAM, 0);
   if (sock < 0) {
-    std::cerr << "Failed to create socket\n";
+    perror("Failed to create socket");
     return 1;
   }
 
@@ -59,32 +59,41 @@ int main() {
   addr.sin_port = htons(8888);
   addr.sin_addr.s_addr = INADDR_ANY;
 
-  if (bind(sock, (sockaddr *)&addr, sizeof(addr)) < 0) {
-    std::cerr << "Failed to bind to port 8888\n";
+  if (bind(sock, reinterpret_cast<sockaddr*>(&addr), sizeof(addr)) < 0) {
+    perror("Failed to bind to port 8888");
     close(sock);
     return 1;
   }
 
-  std::cout << "Listening on port 8888...\n";
-  std::cout << "Waiting for controller data...\n\n";
+  cout << "Listening on port 8888...\n";
+  cout << "Waiting for controller data...\n\n";
 
   // Receive loop
-  char buffer[1024];
+  controller::Packet packet;
   sockaddr_in client_addr;
   socklen_t client_len = sizeof(client_addr);
 
+  uint32_t lastPacketId = 0;
+
   while (true) {
-    ssize_t received = recvfrom(sock, buffer, sizeof(buffer) - 1, 0,
-                                (sockaddr *)&client_addr, &client_len);
+    ssize_t received = recvfrom(sock, &packet, sizeof(packet), 0,
+                                reinterpret_cast<sockaddr*>(&client_addr), &client_len);
 
-    if (received > 0) {
-      buffer[received] = '\0';
-
-      // Get client IP
-      char client_ip[INET_ADDRSTRLEN];
-      inet_ntop(AF_INET, &client_addr.sin_addr, client_ip, INET_ADDRSTRLEN);
-
-      std::cout << "From " << client_ip << ": " << buffer << std::endl;
+    if (received == sizeof(packet)) {
+      uint16_t expectedChecksum = controller::calculateChecksum(&packet);
+      cout << "Received packet with checksum: " << packet.checksum << " (expected: " << expectedChecksum << ")\n";
+      if (packet.checksum != expectedChecksum) {
+        cout << "Checksum mismatch! : data may be distorted.\n";
+        continue;
+      }
+      if (packet.packetId > lastPacketId + 1) {
+        cout << "Packet lost! Lost " << packet.packetId - lastPacketId - 1 << " packets.\n";
+        continue;
+      }
+      lastPacketId = packet.packetId;
+      printControllerState(packet);
+    } else if (received > 0) {
+      cout << "Received invalid packet size: " << received << " bytes\n";
     }
   }
 
