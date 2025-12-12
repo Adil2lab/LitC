@@ -1,2 +1,0 @@
-ninja: Entering directory `/home/adil/Desktop/controllerProject/androidController/app/.cxx/Debug/551m6hr5/x86'
-ninja: no work to do.

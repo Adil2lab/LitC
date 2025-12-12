@@ -1,0 +1,3 @@
+/home/adil/Desktop/controllerProject/build/CMakeFiles/receiver.dir
+/home/adil/Desktop/controllerProject/build/CMakeFiles/edit_cache.dir
+/home/adil/Desktop/controllerProject/build/CMakeFiles/rebuild_cache.dir

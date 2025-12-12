@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/receiver.dir/src/main.cpp.o -o /home/adil/Desktop/controllerProject/linuxReciever/build/receiver 

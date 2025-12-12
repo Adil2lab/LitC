@@ -15,7 +15,7 @@ namespace controller {
  * Packed controller data packet
  * Total size: 18 bytes (no padding due to pack(1))
  */
-struct ControllerPacket {
+struct Packet {
   uint32_t packetId;    // Unique packet identifier
   uint16_t buttons;     // Button state bitfield
   int16_t leftX;        // Left stick X axis (-32768 to 32767)
@@ -29,8 +29,8 @@ struct ControllerPacket {
 #pragma pack(pop)
 
 // Verify expected packed size
-static_assert(sizeof(ControllerPacket) == 18,
-              "ControllerPacket must be exactly 18 bytes");
+static_assert(sizeof(Packet) == 18,
+              "Packet must be exactly 18 bytes");
 
 /**
  * Simple checksum calculation
@@ -38,11 +38,11 @@ static_assert(sizeof(ControllerPacket) == 18,
  * @param packet Pointer to the packet to calculate checksum for
  * @return Computed checksum value
  */
-inline uint16_t calculateChecksum(const ControllerPacket *packet) {
+inline uint16_t calculateChecksum(const Packet *packet) {
   uint16_t sum = 0;
   const uint8_t *data = reinterpret_cast<const uint8_t *>(packet);
   // Sum all bytes except the checksum
-  for (size_t i = 0; i < sizeof(ControllerPacket) - sizeof(uint16_t); i++) {
+  for (size_t i = 0; i < sizeof(Packet) - sizeof(uint16_t); i++) {
     sum += data[i];
   }
   return sum;
@@ -52,7 +52,7 @@ inline uint16_t calculateChecksum(const ControllerPacket *packet) {
  * Controller button definitions
  * Use bitwise operations to check/set button states
  */
-enum class ControllerButtons : uint16_t {
+enum class Buttons : uint16_t {
   A = 1 << 0,
   B = 1 << 1,
   X = 1 << 2,
@@ -69,14 +69,14 @@ enum class ControllerButtons : uint16_t {
   DOWN = 1 << 13
 };
 
-// Bitwise operators for ControllerButtons enum class
-[[nodiscard]] constexpr uint16_t operator|(ControllerButtons lhs,
-                                           ControllerButtons rhs) noexcept {
+// Bitwise operators for Buttons enum class
+[[nodiscard]] constexpr uint16_t operator|(Buttons lhs,
+                                           Buttons rhs) noexcept {
   return static_cast<uint16_t>(lhs) | static_cast<uint16_t>(rhs);
 }
 
 [[nodiscard]] constexpr uint16_t operator&(uint16_t lhs,
-                                           ControllerButtons rhs) noexcept {
+                                           Buttons rhs) noexcept {
   return lhs & static_cast<uint16_t>(rhs);
 }
 
@@ -87,7 +87,7 @@ enum class ControllerButtons : uint16_t {
  * @return true if button is pressed
  */
 [[nodiscard]] constexpr bool isButtonPressed(uint16_t buttons,
-																						 ControllerButtons button) noexcept {
+																						 Buttons button) noexcept {
   return (buttons & button) != 0;
 }
 
@@ -97,7 +97,7 @@ enum class ControllerButtons : uint16_t {
  * @param button Button to set
  * @param pressed true to press, false to release
  */
-constexpr void setButton(uint16_t &buttons, ControllerButtons button,
+constexpr void setButton(uint16_t &buttons, Buttons button,
                          bool pressed) noexcept {
   if (pressed) {
     buttons |= static_cast<uint16_t>(button);

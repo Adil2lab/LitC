@@ -6,9 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml
-9        android:targetSdkVersion="33" />
-9-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:4:5-67
@@ -18,66 +16,67 @@
 12-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:5:22-73
 13
 14    <permission
-14-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/1ae15ef57d5a3b227cb589acaef7fc5a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+14-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/0b3d22ab099177b3472464321ad2c41c/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
 15        android:name="com.controller.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-15-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/1ae15ef57d5a3b227cb589acaef7fc5a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+15-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/0b3d22ab099177b3472464321ad2c41c/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
 16        android:protectionLevel="signature" />
-16-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/1ae15ef57d5a3b227cb589acaef7fc5a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+16-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/0b3d22ab099177b3472464321ad2c41c/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
 17
 18    <uses-permission android:name="com.controller.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-18-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/1ae15ef57d5a3b227cb589acaef7fc5a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-18-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/1ae15ef57d5a3b227cb589acaef7fc5a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+18-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/0b3d22ab099177b3472464321ad2c41c/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/0b3d22ab099177b3472464321ad2c41c/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
 19
 20    <application
 20-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:7:5-20:19
 21        android:allowBackup="true"
 21-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:8:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/1ae15ef57d5a3b227cb589acaef7fc5a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+22-->[androidx.core:core:1.9.0] /home/adil/.gradle/caches/transforms-3/0b3d22ab099177b3472464321ad2c41c/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 23        android:debuggable="true"
-24        android:label="Virtual Controller"
-24-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:9:9-43
-25        android:theme="@style/Theme.AppCompat.Light" >
-25-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:10:9-53
-26        <activity
-26-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:12:9-19:20
-27            android:name="com.controller.MainActivity"
-27-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:13:13-41
-28            android:exported="true" >
-28-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:14:13-36
-29            <intent-filter>
-29-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:15:13-18:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:16:17-69
-30-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:16:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:17:17-77
-32-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:17:27-74
-33            </intent-filter>
-34        </activity>
-35
-36        <provider
-36-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-37            android:name="androidx.startup.InitializationProvider"
-37-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-38            android:authorities="com.controller.androidx-startup"
-38-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-39            android:exported="false" >
-39-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-40            <meta-data
-40-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-41                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-41-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-42                android:value="androidx.startup" />
-42-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/2ce0a9f9f2d6d101fe8003ad2dd88190/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-43            <meta-data
-43-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/adil/.gradle/caches/transforms-3/dd8202bb7cb2ab7948ab81acb0f6c61b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-44                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-44-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/adil/.gradle/caches/transforms-3/dd8202bb7cb2ab7948ab81acb0f6c61b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-45                android:value="androidx.startup" />
-45-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/adil/.gradle/caches/transforms-3/dd8202bb7cb2ab7948ab81acb0f6c61b/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-46        </provider>
-47    </application>
-48
-49</manifest>
+24        android:extractNativeLibs="true"
+25        android:label="Virtual Controller"
+25-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:9:9-43
+26        android:theme="@style/Theme.AppCompat.Light" >
+26-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:10:9-53
+27        <activity
+27-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:12:9-19:20
+28            android:name="com.controller.MainActivity"
+28-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:13:13-41
+29            android:exported="true" >
+29-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:14:13-36
+30            <intent-filter>
+30-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:15:13-18:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:16:17-69
+31-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:16:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:17:17-77
+33-->/home/adil/Desktop/controllerProject/androidController/app/src/main/AndroidManifest.xml:17:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <provider
+37-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+38            android:name="androidx.startup.InitializationProvider"
+38-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+39            android:authorities="com.controller.androidx-startup"
+39-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+40            android:exported="false" >
+40-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+41            <meta-data
+41-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+42-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+43                android:value="androidx.startup" />
+43-->[androidx.emoji2:emoji2:1.2.0] /home/adil/.gradle/caches/transforms-3/62b28d7eb847e7abf6aaaff8ea6ef2f1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+44            <meta-data
+44-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/adil/.gradle/caches/transforms-3/8f0daf5ec35b9913989e33b1efc5d043/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+45-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/adil/.gradle/caches/transforms-3/8f0daf5ec35b9913989e33b1efc5d043/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+46                android:value="androidx.startup" />
+46-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/adil/.gradle/caches/transforms-3/8f0daf5ec35b9913989e33b1efc5d043/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+47        </provider>
+48    </application>
+49
+50</manifest>
