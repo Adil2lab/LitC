@@ -1,3 +1,5 @@
 # ninja log v5
-0	654	1765542592703203210	CMakeFiles/controller.dir/controller.cpp.o	be9fb6de4fc3aefc
 655	679	1765542592730911500	/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/195p6no3/obj/x86_64/libcontroller.so	579aafceccb1a2ff
+0	654	1765542592703203210	CMakeFiles/controller.dir/controller.cpp.o	be9fb6de4fc3aefc
+3	124	1765631328741949460	CMakeFiles/controller.dir/controller.cpp.o	be9fb6de4fc3aefc
+124	219	1765631328833315101	/home/adil/Desktop/controllerProject/androidController/app/build/intermediates/cxx/Debug/195p6no3/obj/x86_64/libcontroller.so	579aafceccb1a2ff
