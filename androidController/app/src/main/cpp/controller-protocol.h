@@ -66,7 +66,9 @@ enum class Buttons : uint16_t {
   LEFT = 1 << 10,
   RIGHT = 1 << 11,
   UP = 1 << 12,
-  DOWN = 1 << 13
+  DOWN = 1 << 13,
+  LEFT_STICK_DOWN = 1 << 14,
+  RIGHT_STICK_DOWN = 1 << 15,
 };
 
 // Bitwise operators for Buttons enum class
