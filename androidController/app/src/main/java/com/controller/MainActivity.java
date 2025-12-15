@@ -2,13 +2,15 @@ package com.controller;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.LinearLayout;
 import android.view.Gravity;
 import android.widget.TextView;
-import android.os.Handler;
 
 public class MainActivity extends Activity {
 
@@ -23,15 +25,21 @@ public class MainActivity extends Activity {
 
     private native void closeNetwork();
 
-    private Handler handler = new Handler();
-    private boolean isSending = false;
+    // Dedicated network thread for low-latency sending
+    private HandlerThread networkThread;
+    private Handler networkHandler;
+    private Handler mainHandler;
+    private volatile boolean isRunning = false;
 
-    // Joystick state
-    private int leftStickX = 0;
-    private int leftStickY = 0;
-    private int rightStickX = 0;
-    private int rightStickY = 0;
-    private int currentButtons = 0;
+    // Joystick state (volatile for thread safety)
+    private volatile int leftStickX = 0;
+    private volatile int leftStickY = 0;
+    private volatile int rightStickX = 0;
+    private volatile int rightStickY = 0;
+    private volatile int currentButtons = 0;
+
+    // Polling interval: 8ms = 120Hz for low latency
+    private static final int POLL_INTERVAL_MS = 8;
 
     // Button Flags ( Must match C++ Enum )
     private static final int A = 1 << 0;
@@ -55,6 +63,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Initialize dedicated network thread for low-latency sending
+        networkThread = new HandlerThread("NetworkThread", Thread.MAX_PRIORITY);
+        networkThread.start();
+        networkHandler = new Handler(networkThread.getLooper());
+        mainHandler = new Handler(Looper.getMainLooper());
+
         // Create UI programmatically (no XML needed!)
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -68,7 +82,7 @@ public class MainActivity extends Activity {
 
         EditText ipInput = new EditText(this);
         ipInput.setHint("Server IP Address");
-        ipInput.setText("192.168.0.11"); // Change to your Linux IP
+        ipInput.setText("Insert your IP");
         ipInput.setGravity(Gravity.CENTER);
         layout.addView(ipInput);
 
@@ -214,6 +228,7 @@ public class MainActivity extends Activity {
         leftJoystick.setOnJoystickMoveListener((x, y) -> {
             leftStickX = x;
             leftStickY = y;
+            sendImmediateUpdate(); // Event-driven: send immediately on change
         });
         leftJoystickLayout.addView(leftJoystick);
 
@@ -233,6 +248,7 @@ public class MainActivity extends Activity {
         rightJoystick.setOnJoystickMoveListener((x, y) -> {
             rightStickX = x;
             rightStickY = y;
+            sendImmediateUpdate(); // Event-driven: send immediately on change
         });
         rightJoystickLayout.addView(rightJoystick);
 
@@ -240,36 +256,52 @@ public class MainActivity extends Activity {
 
         layout.addView(joystickContainer);
 
-        // Start continuous sending loop (60Hz)
+        // Start continuous sending loop at 120Hz on dedicated thread
         startSendingLoop();
 
         setContentView(layout);
     }
 
     private void startSendingLoop() {
-        handler.postDelayed(new Runnable() {
+        isRunning = true;
+        networkHandler.post(new Runnable() {
             @Override
             public void run() {
-                // Send current state at 60Hz
+                if (!isRunning)
+                    return;
+                // Send current state at 120Hz
                 sendControllerData(currentButtons, leftStickX, leftStickY,
                         rightStickX, rightStickY, 0, 0);
-                handler.postDelayed(this, 16); // ~60 FPS
+                networkHandler.postDelayed(this, POLL_INTERVAL_MS);
             }
-        }, 16);
+        });
+    }
+
+    // Event-driven: send immediately when joystick moves
+    private void sendImmediateUpdate() {
+        networkHandler.post(() -> {
+            sendControllerData(currentButtons, leftStickX, leftStickY,
+                    rightStickX, rightStickY, 0, 0);
+        });
     }
 
     private void sendButtonPress(int button) {
         currentButtons = button;
-        sendControllerData(currentButtons, leftStickX, leftStickY,
-                rightStickX, rightStickY, 0, 0);
+        sendImmediateUpdate(); // Send immediately
         // Clear button after short delay
-        handler.postDelayed(() -> currentButtons = 0, 100);
+        mainHandler.postDelayed(() -> currentButtons = 0, 100);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
+        isRunning = false;
+        if (networkHandler != null) {
+            networkHandler.removeCallbacksAndMessages(null);
+        }
+        if (networkThread != null) {
+            networkThread.quitSafely();
+        }
         closeNetwork();
     }
 }

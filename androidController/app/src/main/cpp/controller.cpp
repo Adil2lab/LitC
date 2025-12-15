@@ -32,6 +32,16 @@ Java_com_controller_MainActivity_initNetwork(JNIEnv *env, jobject,
     return JNI_FALSE;
   }
 
+  // === LOW LATENCY SOCKET OPTIONS ===
+
+  // 1. Small send buffer to reduce kernel buffering delay
+  int sndbuf = 4096; // 4KB - enough for our 18-byte packets
+  setsockopt(g_socket, SOL_SOCKET, SO_SNDBUF, &sndbuf, sizeof(sndbuf));
+
+  // 2. Set IP TOS for low-delay traffic (DSCP class)
+  int tos = 0x10; // IPTOS_LOWDELAY
+  setsockopt(g_socket, IPPROTO_IP, IP_TOS, &tos, sizeof(tos));
+
   // Setup server address
   g_server_addr = {};
   g_server_addr.sin_family = AF_INET;
@@ -46,7 +56,7 @@ Java_com_controller_MainActivity_initNetwork(JNIEnv *env, jobject,
     return JNI_FALSE;
   }
   env->ReleaseStringUTFChars(serverIp, ip);
-  LOGD("Network initialized.");
+  LOGD("Network initialized with low-latency options.");
   return JNI_TRUE;
 }
 
@@ -59,7 +69,9 @@ Java_com_controller_MainActivity_sendControllerData(
     return JNI_FALSE;
   }
 
-  controller::Packet packet;
+  // Pre-allocate static packet to avoid stack allocation overhead in hot path
+  static controller::Packet packet;
+
   packet.packetId = g_sequence++;
   packet.buttons = static_cast<uint16_t>(buttons);
   packet.leftX = static_cast<int16_t>(leftX);

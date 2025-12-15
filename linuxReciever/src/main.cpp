@@ -12,7 +12,7 @@ using std::cout;
 
 void printControllerState(const controller::Packet &packet) {
   cout << "\n=== Packet #" << packet.packetId << "===\n";
-  
+
   /* Buttons */
   cout << "Buttons: ";
   if (packet.buttons & controller::Button::A) cout << "[A] ";
@@ -59,13 +59,19 @@ int main() {
   addr.sin_port = htons(8888);
   addr.sin_addr.s_addr = INADDR_ANY;
 
-  if (bind(sock, reinterpret_cast<sockaddr*>(&addr), sizeof(addr)) < 0) {
+  if (bind(sock, reinterpret_cast<sockaddr *>(&addr), sizeof(addr)) < 0) {
     perror("Failed to bind to port 8888");
     close(sock);
     return 1;
   }
 
-  cout << "Listening on port 8888...\n";
+  // Optimize receive buffer to minimize buffering delay
+  int rcvbuf = 4096;
+  if (setsockopt(sock, SOL_SOCKET, SO_RCVBUF, &rcvbuf, sizeof(rcvbuf)) < 0) {
+    perror("Failed to set SO_RCVBUF");
+  }
+
+  cout << "Listening on port 8888... (Optimized for Low Latency)\n";
   cout << "Waiting for controller data...\n\n";
 
   // Receive loop
@@ -74,10 +80,33 @@ int main() {
   socklen_t client_len = sizeof(client_addr);
 
   uint32_t lastPacketId = 0;
+  uint32_t packetsReceived = 0;
 
   while (true) {
-    ssize_t received = recvfrom(sock, &packet, sizeof(packet), 0,
-                                reinterpret_cast<sockaddr*>(&client_addr), &client_len);
+    // BLOCKING wait for the first packet of this 'frame'
+    ssize_t received =
+        recvfrom(sock, &packet, sizeof(packet), 0,
+                 reinterpret_cast<sockaddr *>(&client_addr), &client_len);
+
+    if (received < 0) {
+      perror("recvfrom failed");
+      continue;
+    }
+
+    // DRAIN: Read all remaining packets in the buffer (non-blocking) to get the
+    // absolutely latest one This ensures that if the OS buffered 5 packets
+    // while we were processing, we skip to the 5th one immediately.
+    controller::Packet tempPacket;
+    ssize_t drainReceived;
+    int drainedCount = 0;
+    while ((drainReceived = recvfrom(
+                sock, &tempPacket, sizeof(tempPacket), MSG_DONTWAIT,
+                reinterpret_cast<sockaddr *>(&client_addr), &client_len)) > 0) {
+      if (drainReceived == sizeof(packet)) {
+        packet = tempPacket;
+        drainedCount++;
+      }
+    }
 
     if (received == sizeof(packet)) {
       uint16_t expectedChecksum = controller::calculateChecksum(&packet);
